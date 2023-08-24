@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kate Winslet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+    <style>
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background-color: rgb(207, 202, 202);
+}
+
+/* Button */
+button {
+    border: none;
+    background-color:transparent;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: rgb(102, 102, 102);
+}
+
+i {
+    color: gray;
+    font-size: 4em;
+}
+
+/* Book */
+.book {
+    width: 350px;
+    height: 500px;
+    position: relative;
+    transition: transform 0.5s;
+}
+
+.paper {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+}
+
+.front {
+    backface-visibility: hidden;
+    border-left: 3px solid rgb(201, 195, 195);
+}
+
+.front, 
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.front {
+    z-index: 1;
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(180deg)
+}
+
+/* Paper Flipped */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg)
+}
+img{
+    width: 350px;
+    height: 500px;
+}
+
+/* Paper Z-index */
+#p1 {
+    z-index: 3;
+}
+
+#p2 {
+    z-index: 2;
+}
+
+#p3 {
+    z-index: 1;
+}
+
+/* Customization */
+
+.book-title {
+    font-size: 3em;
+    margin-bottom: 40px;
+}
+h2{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 50px;
+    color: rgb(135, 1, 1);
+    text-decoration: underline;
+
+}
+p{
+   
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    border: 2px solid ;
+    border-radius: 10px;
+    padding:20px;
+}
+h3{
+    font-family: 200px;
+    color:rgb(143, 5, 51);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    text-decoration: underline;
+
+
+}
+
+.cover-img {
+    width: 350px;
+    height: 500px;
+    object-fit: cover;
+  
+}
+
+#b1 {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    justify-content: space-around;
+   
+}
+
+#b1 h2 {
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#b1 p {
+    margin-bottom: 20px;
+}
+.bio{
+    text-align: center;
+    width: 250px;
+    height: 150px;
+}
+#bio{
+    border:none;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+    </style>
+</head>
+
+<body>
+    
+    <button id="prev-btn">
+        <i class="fas fa-arrow-circle-left"></i>
+    </button>
+
+    <!-- The Book -->
+    <div id="book" class="book">
+        <!-- Paper 1 -->
+        <div id="p1" class="paper">
+            <div class="front">
+                <div id="f1" class="front-content">
+                    
+                    <img class="cover-img" src="./images/kate1.jpg" alt="kate">
+                </div>
+            </div>
+            <div class="back">
+                <div id="b1" class="back-content">
+                  <img src="./images/kate2.jpg" alt="kate">
+                   
+                </div>
+            </div>
+        </div>
+        <!-- Paper 2 -->
+        <div id="p2" class="paper">
+            <div class="front">
+                <div id="f2" class="front-content">
+                    
+                    <img class="bio" src="./images/R.png" alt="bio">
+                   <p id="bio">
+                    Kate Elizabeth Winslet  ( born 5 October 1975) is an English actress. Known for her work in independent films, particularly period dramas, and for her portrayals of headstrong and complicated women.
+                    Winslet studied drama at the Redroofs Theatre School. Her first screen appearance, at age 15, was in the British television series Dark Season (1991). She made her film debut playing a teenage murderess in Heavenly Creatures (1994), 
+                    and went on to win a BAFTA Award for playing Marianne Dashwood in Sense and Sensibility (1995)
+                   </p>
+                   
+                   
+                </div>
+            </div>
+            <div class="back">
+                <div id="b2" class="back-content">
+                    <img src="./images/Frame 1 (4).png" alt="films">
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Paper 3 -->
+        <div id="p3" class="paper">
+            <div class="front">
+                <div id="f3" class="front-content">
+                    <h3>Acting Abilities</h3>
+                    <p>
+                        Acting Skill - 4.8 Stars <br>
+                        Overall Versatility - 4.5 Stars <br>
+                        Role Transformation - 4.8 Stars <br>
+
+                    </p>
+                    <h3>Greatest Performances</h3>
+                    <p>
+                        Eternal Sunshine of the Spotless Mind (2004) <br>
+                        Titanic (1997) <br>
+                        Les noces rebelles (2008)<br>
+                       
+                    </p>
+                </div>
+            </div>
+            <div class="back">
+                <div id="b3" class="back-content">
+                  <img src="./images/katee.jpg" alt="end">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="next-btn">
+        <i class="fas fa-arrow-circle-right"></i>
+    </button>
+
+  
+
+
+    <script src="main.js"></script>
+
+    
+</body>
+</html>
